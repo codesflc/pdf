@@ -423,9 +423,9 @@ func (p Page) Content() Content {
 			f := g.Tf.BaseFont()
 			if i := strings.Index(f, "+"); i >= 0 {
 				f = f[i+1:]
-			}                    End remove
+			}
 			text = append(text, Text{f, Trm[0][0], Trm[2][0], Trm[2][1], w0 / 1000 * Trm[0][0], string(ch)})
-			// }
+			// }                 End remove
 			tx := w0/1000*g.Tfs + g.Tc
 			if ch == ' ' {
 				tx += g.Tw
